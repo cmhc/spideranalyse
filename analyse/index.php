@@ -1,14 +1,14 @@
 ﻿<?php
-
 /**
  * 展示图表的文件
  * 已经定义的变量
  * $default_date
  */
 
-
-
 for($i=1;$i<32;$i++){
+    if( $i<10 ){
+        $i = '0'.$i;
+    }
     $date[] = $default_date.'-'.$i;
 }
 
@@ -37,14 +37,11 @@ foreach( $loginfo as $spider=>$content ){
     <!--Step:1 为ECharts准备一个具备大小（宽高）的Dom-->
     <h2>蜘蛛爬行趋势</h2>
     <div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
-
     <!--Step:2 Import echarts.js-->
-    <!--Step:2 引入echarts.js-->
-    <script src="<?php echo SA_URL;?>/analyse/js/echarts.js"></script>
-    
+    <!--Step:2 引入echarts.js wp_enqueue_script-->
     <script type="text/javascript">
-    // Step:3 conifg ECharts's path, link to echarts.js from current page.
-    // Step:3 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
+    //conifg ECharts's path, link to echarts.js from current page.
+    //模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需图表路径
     require.config({
         paths: {
             echarts: '<?php echo SA_URL;?>/analyse/js'

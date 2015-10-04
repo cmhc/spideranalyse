@@ -7,10 +7,12 @@ class spiderAnalyse{
 
 	/**
 	 * 初始化菜单
+	 * 加载脚本
 	 */
 	public function __construct(){
-		
+
 		add_action('admin_menu', array(&$this,'addMenu') );
+		add_action('admin_enqueue_scripts', array(&$this,'loadscript') );
 
 	}
 
@@ -59,6 +61,14 @@ class spiderAnalyse{
 	}
 
 	/**
+	 * 加载脚本
+	 * @return none
+	 */
+	public function loadscript(){
+		wp_enqueue_script('echart', SA_URL.'/analyse/js/echarts.js');
+	}
+
+	/**
 	 * 日志分析菜单所展示页面
 	 * @return none
 	 */
@@ -68,12 +78,12 @@ class spiderAnalyse{
 			echo '<h1 style="text-align:center;color:#ccc;margin-top:50px;">日期格式出错，正确格式2015-01</h1>';
 			die();
 		}
-
-		if( ($loginfo = $this->getcount($default_date)) )
+		
+		if( ($loginfo = $this->getcount($default_date)) ){
 			include( SA_DIR.'/analyse/index.php' );
+		}
 
 	}
-
 
 }
 
