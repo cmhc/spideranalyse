@@ -64,7 +64,8 @@ class spiderAnalyse{
 	 * 加载脚本
 	 * @return none
 	 */
-	public function loadscript(){
+	public function loadscript($hook){
+		if( $hook != 'toplevel_page_spideranalyse/class/spiderAnalyse.class' ) return;
 		wp_enqueue_script('echart', SA_URL.'/analyse/js/echarts.js');
 	}
 
