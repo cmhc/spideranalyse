@@ -1,6 +1,7 @@
 === spideranalyse ===
-Contributors: huchao
-Tags: spider,log,spideranalyse
+Contributors: hu_chao
+Tags: spider,log,spideranalyse,蜘蛛日志统计
+Donate link: http://imhuchao.com/
 Requires at least: 3.0.1
 Tested up to: 4.3.1
 Stable tag: 0.0.1
@@ -14,11 +15,15 @@ user can analyze these logs, at present the background provides a chart, statist
 
 For users, this will let him understand that, your web site in the search engine's popularity. Later, may according to the spider crawling traces to analyze health web site 。
 
+If you have any questions, you can go to the [spideranalyse plugin page](http://imhuchao.com/256.html) for message.
+
 这个插件的作用是记录蜘蛛日志，支持baiduspider，googlebot，360spider，msnbot，sogouspider，yahoo slurp等等。
 
 用户可以对这些日志进行分析，目前后台提供了一个图表，统计每种蜘蛛每天的爬行量
 
 对于用户来说，这能够让他了解到，自己的网站在搜索引擎中的受欢迎程度。以后，或许能够根据蜘蛛的爬行痕迹来分析网站的健康度
+
+如果有任何疑问，可以到 [spideranalyse插件页面](http://imhuchao.com/256.html) 进行留言
 
 == Installation ==
 

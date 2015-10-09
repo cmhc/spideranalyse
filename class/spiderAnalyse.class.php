@@ -20,7 +20,7 @@ class spiderAnalyse{
 	 * 添加菜单
 	 */
 	public function addMenu(){
-		add_menu_page('spideranalyse', '蜘蛛日志分析', 'manage_options', __FILE__, array(&$this,'spideranalysePage') );
+		add_menu_page('spideranalyse', '蜘蛛日志分析', 'manage_options', 'spideranalyse', array(&$this,'spideranalysePage') );
 	}
 
 
@@ -65,7 +65,7 @@ class spiderAnalyse{
 	 * @return none
 	 */
 	public function loadscript($hook){
-		if( $hook != 'toplevel_page_spideranalyse/class/spiderAnalyse.class' ) return;
+		if( $hook != 'toplevel_page_spideranalyse' ) return;
 		wp_enqueue_script('echart', SA_URL.'/analyse/js/echarts.js');
 	}
 
