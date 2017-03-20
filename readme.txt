@@ -35,7 +35,7 @@ If you have any questions, you can go to the [spideranalyse plugin page](http://
 
 == Screenshots ==
 
-screenshot-1.png
+1. screenshot-1.png
 
 == Changelog ==
 
